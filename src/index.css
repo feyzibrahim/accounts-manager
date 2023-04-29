@@ -12,11 +12,78 @@ code {
     monospace;
 }
 
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.form, .peopleList {
+  height: 90vh;
+}
+
 .row {
+  padding: 0 20px;
   display: flex;
-  flex-direction: row;
-  width: 30%;
   align-items: center;
+  flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
+}
+
+.deleted {
+  display: none;
+}
+
+.row:hover {
+  background-color: #ccc;
+}
+
+.row:active {
+  background-color: #bdbdbd;
+}
+
+.last-item {
+  border-bottom: none;
+}
+
+/* Form */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.form label {
+  margin-bottom: 0.5rem;
+}
+
+.form input[type="text"], .form input[type="number"] {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.form button {
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.form button:hover {
+  background-color: #0069d9;
+
 }
