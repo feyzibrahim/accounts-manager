@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import PouchDB from "pouchdb";
 
-const PeopleList = () => {
+const DebtorsList = () => {
   const db = useMemo(() => {
     return new PouchDB("mydb");
   }, []);
@@ -12,7 +12,7 @@ const PeopleList = () => {
       try {
         const result = await db.allDocs({ include_docs: true });
         setData(
-          result.rows.map((row) => row.doc).filter((doc) => doc.amount > 0)
+          result.rows.map((row) => row.doc).filter((doc) => doc.amount < 0)
         );
       } catch (err) {
         console.log(err);
@@ -74,4 +74,4 @@ const PeopleList = () => {
   );
 };
 
-export default PeopleList;
+export default DebtorsList;

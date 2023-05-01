@@ -14,8 +14,8 @@ code {
 
 .home {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
 .form, .peopleList {
@@ -47,12 +47,20 @@ code {
   border-bottom: none;
 }
 
+.rowLefty {
+  display: flex;
+}
+
+.rowLefty p {
+  margin-right: 10px;
+}
+
 /* Form */
 
 .form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
   margin: auto;
   margin-top: 50px;
 }
